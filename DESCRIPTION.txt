@@ -1,0 +1,39 @@
+This project is a part of the coursework for Text Analytics. Here we scraped data from various websites to understand the major differences in healthcare systems across 3 countries.
+
+Table of contents
+1. Business Problem
+2. Data Used
+3. Approach
+4. Algorithms/Libraries Used
+5. Results
+
+Business Problem
+Healthcare systems differ widely across various countries and perform the backbone of any developed country. Across the globe, health care policymakers face mounting pressure to lower costs while improving the quality and safety of care. Countries need to analyze the sentiment amongst the general public to better understand what is working for them and what is not and how successful they have been at improving care for its population. They need to learn from countries that are producing better outcomes.
+
+The following business questions can be answered through the analysis-
+
+How is their healthcare system performing as compared to other countries?
+Does the general public have a positive or a negative sentiment towards the system?
+What are the major themes being discussed on public platforms?
+What opinion do the experts have of the system?
+What image are the news websites portraying about the system?
+What metrics are used as proxy to measure the quality of healthcare systems?
+
+Data Used
+We scraped data from various blogs to understand the expert opinion, from various news websites to understand what topics are being discussed in the news and from websites like Quora and Reddit to understand the public opionion.
+
+Approach
+1. Scrape Data from multiple platforms across Africa, Europe and America to understand the different opinions that people have about their countries' healthcare systems. Here we scraped data from blogs written by healthcare experts to analyze the vital links in the healthcare chain according to the experts, from news sites to understand what perception is the media portraying to the general public and from Quora and Reddit discussions to understand what the common man feels about their systems.
+2. Perform Topic Modeling on user opinions from three geographies with different healthcare standards - US, Europe and Africa. Create Word clouds to visualize the main topics that outshone in the 3 geographies.
+3. Perform sentiment analysis on different data sources for all the three geographies to get an overview of the genral public sentiment towards their countries' healthcare systems.
+4. Use Multidimensional scaling and Bar Graphs to visualize the themes that outshone
+5. To better understand the major themes, perform unsupervised extractive summarization using cosine similarity on blogs.
+6. Analyze and build hypothesis around any stark differences that outshone among the 3 geographies.
+
+Algorithms/Libraries Used
+1. Scikit-learn and gensim.
+2. Scit-kit gives more flexibility in terms of fine tuning the parameters
+3. Word pre-processing - Stopwords removal and lemmatization
+4. LDA Topic modelling - hypertuned the parameters (number of topics, iterations etc) via sklearn Gridsearch
+5. Visualization was done with pyLDAvis library
+6. Unsupervised Extractive Summarization - Tokenize and vector each sentence and performed cosine similarity
